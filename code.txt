@@ -1,0 +1,68 @@
+if (buttonEl.innerHTML == "Create") {
+        buttonEl.onclick = () => {
+            let divEl10 = document.createElement("div");
+            divEl10.id = "postEl";
+
+
+            let pElAuthor = document.createElement("p");
+            pElAuthor.innerHTML = "Author image";
+
+            let inputEl3 = document.createElement("input");
+            inputEl3.style.color = "white";
+            inputEl3.setAttribute("type", "text");
+
+            let closeBtn = document.createElement("button");
+            closeBtn.innerHTML = "X";
+            closeBtn.onclick = () => {
+                divEl10.parentElement.removeChild(divEl10);
+            }
+
+            let postBtnEl = document.createElement("button");
+            postBtnEl.innerHTML = "post";
+            postBtnEl.onclick = () => {
+                let post = {
+
+                    author: {
+                        id: 'vinay kumar golla',
+                        image: "vi.jpg",
+                    },
+                    location: 'pedakallepalli',
+                    images: inputEl3.value,
+                    like_count: count,
+                    caption: inputEl3.value,
+                    link: 'https://www.instagram.com/p/CzkexXNJrwQ/?utm_source=ig_web_copy_link',
+                    date: '2023-11-14T06:11:48.691Z',
+                    comments: [
+                        {
+                            id: 'pkpl2',
+                            text: 'I commented',
+                            date: '2023-11-14T06:11:58.691Z',
+                            like_count: count,
+                        },
+                        {
+                            id: 'pkpl3',
+                            text: 'I commented 2nd',
+                            date: '2023-11-14T06:14:58.691Z',
+                            like_count: count, // this
+                        },
+                        {
+                            id: 'pkpl4',
+                            text: 'I commented last',
+                            date: '2023-11-14T06:16:58.691Z',
+                        }
+                    ]
+
+                };
+                POSTS.push(post);
+                const rslt = createPost(post);
+                divEl1.appendChild(rslt);
+
+
+            };
+
+            divEl10.append(pElAuthor, inputEl3, postBtnEl, closeBtn);
+            divEl1.appendChild(divEl10);
+
+        }
+
+    }

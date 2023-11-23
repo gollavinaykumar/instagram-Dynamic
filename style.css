@@ -1,0 +1,151 @@
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 200;
+}
+
+
+
+div.left-navbar {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    padding: 16px;
+    border: 1px solid lightgray;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.leftnavbarbuttons {
+    padding-right: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    font-weight: 200;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.leftnavbarbuttons:hover {
+    background-color: lightgray;
+}
+
+.story {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    padding: 32px;
+    padding-right: 40px;
+    text-align: center;
+    height: 140px;
+    margin-left: 120px;
+    width: 500px;
+}
+
+.roundbutton {
+    padding: 10px;
+    border-radius: 60%;
+    border-color: red;
+}
+
+.storyinner {
+    position: absolute;
+    border: 1px solid black;
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 16px;
+    margin-left: 50px;
+    left: 1000px;
+    max-width: fit-content;
+    height: fit-content;
+}
+
+.closebtn {
+    float: inline-end;
+    background-color: black;
+    color: white;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.storyinner img {
+    border-radius: 50px;
+}
+
+.addBtn {
+    height: fit-content;
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    border-color: red;
+}
+
+.information {
+    position: absolute;
+    width: 50%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+input {
+    color: white;
+}
+
+div.col {
+    border: 1px solid grey;
+}
+
+ul.collection {
+    margin: 0;
+}
+
+.collection .collection-item.avatar {
+    min-height: 64px;
+}
+
+.author-name {
+    font-weight: 600;
+}
+
+.card .card-content {
+    padding: 8px;
+}
+
+.card-content .icons i {
+    margin-right: 8px;
+}
+
+#postEl {
+    border: 1px solid black;
+    background-color: black;
+    max-width: 50%;
+    text-align: center;
+    color: white;
+    margin: 50px;
+}
+
+.card {
+    width: 80%;
+    top: 10px;
+    left: 230px;
+
+
+}
+
+.circle {
+    width: 40px;
+}
+

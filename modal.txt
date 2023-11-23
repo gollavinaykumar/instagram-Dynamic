@@ -1,0 +1,104 @@
+if (buttonEl.innerHTML == "Create") {
+
+        buttonEl.onclick = () => {
+            let linkEl = document.createElement("a");
+            linkEl.className = "waves-effect waves-light btn modal-trigger";
+            linkEl.href = "#modal1";
+            linkEl.innerHTML = "Create";
+
+            let createDiv = document.createElement("div");
+            createDiv.id = "modal1";
+            createDiv.className = "modal";
+
+            let createDiv1 = document.createElement("div");
+            createDiv1.style.textAlign = "center";
+            createDiv1.className = "modal-content";
+
+            let pEl1 = document.createElement("h2");
+            pEl1.innerHTML = "Create A Post";
+
+
+
+            let spanEl = document.createElement("h5");
+            spanEl.innerHTML = "Author image";
+
+
+            let inputEl1 = document.createElement("input");
+            inputEl1.style.color = "black";
+            inputEl1.setAttribute("type", "text");
+
+
+            let pEl = document.createElement("h5");
+            pEl.innerHTML = "Author Bio";
+
+            let inputEl2 = document.createElement("input");
+            inputEl2.style.color = "black";
+            inputEl2.setAttribute("type", "text");
+
+
+            createDiv1.append(pEl1, spanEl, inputEl1, pEl, inputEl2);
+
+            let createDiv2 = document.createElement("div");
+            createDiv2.className = "modal-footer";
+            createDiv.append(createDiv1, createDiv2);
+
+            let linkEl1 = document.createElement("button");
+            linkEl1.href = "#!";
+            linkEl1.innerHTML = "post";
+            linkEl1.className = "modal-close waves-effect waves-green btn-flat";
+            linkEl1.onclick = () => {
+
+let post = {
+                    author: {
+                        id: 'vinay kumar golla',
+                        image: "vi.jpg",
+                    },
+                    location: 'pedakallepalli',
+                    images: inputEl3.value,
+                    like_count: count,
+                    caption: PElBio.value,
+                    link: 'https://www.instagram.com/p/CzkexXNJrwQ/?utm_source=ig_web_copy_link',
+                    date: '2023-11-14T06:11:48.691Z',
+                    comments: [
+                        {
+                            id: 'pkpl2',
+                            text: 'I commented',
+                            date: '2023-11-14T06:11:58.691Z',
+                            like_count: count,
+                        },
+                        {
+                            id: 'pkpl3',
+                            text: 'I commented 2nd',
+                            date: '2023-11-14T06:14:58.691Z',
+                            like_count: count, // this
+                        },
+                        {
+                            id: 'pkpl4',
+                            text: 'I commented last',
+                            date: '2023-11-14T06:16:58.691Z',
+                        },
+                    ]
+                };
+                const resultDiv = createPost(post);
+                divEl1.appendChild(resultDiv);
+                POSTS.push(post);
+            }
+
+
+
+            let linkEl2 = document.createElement("a");
+            linkEl2.href = "#!";
+            linkEl2.innerHTML = "close";
+            linkEl2.className = "modal-close waves-effect waves-green btn-flat";
+            linkEl2.onclick = () => {
+                linkEl.parentElement.removeChild(linkEl);
+            }
+            createDiv2.append(linkEl2, linkEl1);
+
+            divEl1.append(linkEl, createDiv);
+
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        }
+
+    }
